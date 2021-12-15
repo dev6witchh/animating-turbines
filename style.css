@@ -1,4 +1,8 @@
-#aermotor{
+#aermotor, #mill{
     transform-origin: center center;
+    transform-box: fill-box;
+}
+#turbine{
+    transform-origin: 91px 123px;
     transform-box: fill-box;
 }

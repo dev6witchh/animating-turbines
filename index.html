@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" /> -->
     <link rel="stylesheet" href="style.css">
+ 
     <title>Animating Turbines</title>
 </head>
 <body>
@@ -333,7 +334,7 @@
                         fill="#DA9B5A" />
                 </g>
             </g>
-            <path class="animate__animated animate__bounce animate__infinite	infinite" id="aermotor"
+            <path id="aermotor"
                 d="M1337.04 207.623C1333.96 207.623 1331 207.193 1328.18 206.403L1312.32 262.963C1320.18 265.165 1328.47 266.367 1337.04 266.367C1353.91 266.367 1369.7 261.785 1383.27 253.825C1373.58 237.269 1362.5 218.323 1353.6 203.13C1348.74 205.982 1343.08 207.623 1337.04 207.623ZM1337.04 142.014C1340.1 142.014 1343.05 142.442 1345.87 143.226L1361.68 86.6528C1353.83 84.4661 1345.58 83.2701 1337.04 83.2701C1320.19 83.2701 1304.42 87.8394 1290.87 95.7754C1300.54 112.339 1311.61 131.294 1320.49 146.495C1325.35 143.651 1331 142.014 1337.04 142.014ZM1368.82 166.658L1425.73 152.046C1419.52 127.787 1403.6 107.43 1382.38 95.3021C1372.88 111.962 1362 131.034 1353.28 146.325C1360.89 150.671 1366.59 157.966 1368.82 166.658ZM1428.57 174.306C1409.39 174.414 1387.44 174.537 1369.84 174.635C1369.84 174.697 1369.84 174.758 1369.84 174.818C1369.84 183.998 1366.07 192.293 1359.99 198.247L1401.09 240.199C1418.05 223.582 1428.58 200.435 1428.58 174.818C1428.58 174.647 1428.57 174.478 1428.57 174.306ZM1304.23 174.818C1304.23 165.63 1308.01 157.329 1314.1 151.373L1273.03 109.387C1256.04 126.007 1245.49 149.175 1245.49 174.818C1245.49 174.965 1245.5 175.109 1245.5 175.254C1264.68 175.163 1286.63 175.058 1304.23 174.975C1304.23 174.923 1304.23 174.873 1304.23 174.818ZM1305.25 182.951L1248.33 197.514C1254.52 221.779 1270.41 242.15 1291.62 254.295C1301.14 237.641 1312.03 218.583 1320.76 203.298C1313.16 198.945 1307.47 191.647 1305.25 182.951Z"
                 fill="#A97B50" />
             <g id="darrieus">
@@ -359,15 +360,23 @@
         </defs>
     </svg>
 
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
     <script>
         anime({
-            targets: "#aermotor",
+            targets: "#aermotor, #turbine",
             rotate: 360,
             loop: true,
             easing: "linear",
-
+            duration: 3000,
         })
+         anime({
+                targets: "#mill",
+                rotate: 360,
+                loop: true,
+                easing: "linear",
+                duration: 6000,
+            })
+
     </script>
 </body>
 </html>
